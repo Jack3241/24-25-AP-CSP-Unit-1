@@ -32,16 +32,16 @@ while (num_dots <= 2 ):
   ladybug.penup()
   ladybug.goto(xpos, ypos)
   ladybug.pendown()
-  ladybug.circle(3)
-  ladybug.penup()
-  ladybug.goto(xpos + 15, ypos + 20)
-  ladybug.pendown()
   ladybug.circle(2)
+  ladybug.penup()
+  ladybug.goto(xpos + 30, ypos + 20)
+  ladybug.pendown()
+  ladybug.circle(1)
 
   # position next dots
   xpos = ypos + 25
   xpos = xpos + 5
-  num_dot = num_dots
+  num_dot = num_dots + 1
 
 ladybug.hideturtle()
 
