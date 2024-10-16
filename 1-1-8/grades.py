@@ -1,12 +1,13 @@
 my_courses = ["English", "Math", "CS"]
 
+redo = "y"
+while (redo == "y"):
+ for course in my_courses:
+    print()
+    print("Enter your points for " + course)
 
-print() # blank line
-print("Enter your points for " + my_courses[0])
+    points = int(input("Points -> "))
 
-points = int(input("Points -> "))
-
-for course in my_courses:
     if (points >= 90):
         print("A")
     elif (points >= 80):
