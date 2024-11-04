@@ -26,6 +26,17 @@ score_writer.goto(-200, 200)
 score_writer.hideturtle()
 counter.penup()
 counter.goto(-200, 130)
+counter.hideturtle()
+def countdown():
+  global timer, timer_up
+  counter.clear()
+  if timer <= 0:
+    counter.write("Time's Up", font=font_setup)
+    timer_up = True
+  else:
+    counter.write("Timer: " + str(timer), font=font_setup)
+    timer -= 1
+    counter.getscreen().ontimer(countdown, counter_interval)
 def change_position():
     xpos = rand.randint(1, 400)
     ypos = rand.randint(1, 300)
@@ -38,6 +49,7 @@ def update_score():
     score_writer.write(score, font=font_setup)
 def spot_click(x, y):
     spot.penup()
+    countdown()
     change_position()
     update_score()
 
