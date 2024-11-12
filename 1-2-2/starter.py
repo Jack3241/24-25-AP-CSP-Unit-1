@@ -1,4 +1,4 @@
-##############################################################################
+##############b################################################################
 #   a121_TR_catch_a_turtle_complete.py
 #   Example solution:
 #      A game where a turtle appears at random locations on the screen and
@@ -62,7 +62,7 @@ def update_score():
 # what happens when the spot is clicked
 def spot_clicked(x, y):
     global timer_up
-    if (not timer_up):
+    if not timer_up:
         update_score()
         change_position()
     else:
@@ -104,7 +104,7 @@ def manage_leaderboard():
   leader_scores_list = lb.get_scores(leaderboard_file_name)
 
   # show the leaderboard with or without the current player
-  if (len(leader_scores_list) < 5 or score >= leader_scores_list[4]):
+  if len(leader_scores_list) < 5 or score >= leader_scores_list[4]:
     lb.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
     lb.draw_leaderboard(True, leader_names_list, leader_scores_list, spot, score)
 
